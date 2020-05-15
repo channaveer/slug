@@ -38,13 +38,17 @@ $blog_count_stmt = $pdo->prepare("
                     WHERE
                         `slug` LIKE :slug
                 ");
+
 $blog_count_stmt->execute([
     ":slug" => "%".$slug."%"
 ]);
+
 $blog_count = $blog_count_stmt->fetchObject();
+
 if ($blog_count && $blog_count->slug_count > 0) {
     $article_increment = $blog_count->slug_count + 1;
     $slug = $slug . '-' . $article_increment;
 }
+
 echo 'Your unique slug - <br/>'. $slug;
 ```
