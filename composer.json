@@ -1,0 +1,21 @@
+{
+    "name": "channaveer/slug",
+    "description": "Simple Slug Generator",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Channaveer Hakari",
+            "email": "channaveer888@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Channaveer\\Slug\\": "src/"
+        }
+    },
+    "minimum-stability": "dev",
+    "require": {
+        "php": ">=5.6.0"
+    }
+}
